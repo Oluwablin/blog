@@ -1,0 +1,591 @@
+.bg-theme {
+    /* background-color: #0165D4; */
+    color: white;
+    background: rgb(55,47,201);
+    background: linear-gradient(90deg, rgba(55,47,201,1) 4%,
+    rgba(30,56,224,0.7819502801120448) 53%, rgba(55,53,230,1) 97%);
+}
+
+.small-color {
+    color: #9C68BF;
+}
+
+i.color-theme{
+    color: #dfa24c;
+}
+
+.color-theme {
+    color: #0165D4;
+}
+
+.color-theme:hover {
+    color: #0165D4;
+}
+
+.grey-theme {
+    color: gray;
+}
+
+.header-search-options{
+    text-align: center;
+}
+
+.header-search-options a {
+    width: 200px;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    margin-top: 40px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.font-w {
+    font-weight: bolder;
+}
+
+.font-w-l {
+    font-weight: lighter;
+}
+
+.header-search-options a:hover {
+    opacity: 0.5;
+    color: white;
+}
+
+
+
+.top-width {
+    width: 200px;
+}
+
+.ticket-listing {
+    padding: 30px 0px;
+}
+
+.ticket-div {
+    height: 180px;
+    background-color: #DFE4E7;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 40px;
+    /* margin-top: -50px;     */
+}
+
+.ticket-container {
+    background-color: #F6F6F6;
+}
+.ticket-div .first {
+    color: #59656E;
+    transform: rotate(140deg);
+}
+
+.ticket-div .second {
+    color: #768692;
+    transform: rotate(140deg);
+}
+
+
+.wide {
+    display: inline-block;
+    width: 80vw;
+    height: 60px;
+}
+
+.wide-top {
+    display: inline-block;
+    width: 330px;
+    height: 40px;
+}
+
+.left-margin {
+    margin-left: 10vw;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.black {
+color: #000;
+}
+.w-17 {
+    width: 90px;
+}
+
+.w-70 {
+    width: 70%;
+}
+
+#locationDropdown {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: black solid 1px;
+    border-radius: 3px;
+}
+
+#locationDropdown:hover {
+    text-decoration: none;
+    border: #0150A7 solid 2px;
+    color: black
+}
+.account-bg {
+    background-color: #0150A7;
+}
+
+.account-bg:hover {
+    color: white;
+}
+
+input[type='radio'] {
+    transform: scale(0.5);
+}
+.pass-hint {
+    margin-left: 3px;
+}
+
+.font-24 {
+    font-size: 24px;
+}
+.font-18 {
+    font-size: 18px;
+}
+.font-15 {
+    font-size: 15px;
+}
+.font-14 {
+    font-size: 14px;
+}
+.font-11 {
+    font-size: 11px;
+}
+.font-10 {
+    font-size: 10px;
+}
+
+.font-5 {
+    font-size: 5px;
+    display: inline-block;
+}
+
+.font-12 {
+    font-size: 12px;
+}
+
+.line-h-7 {
+    line-height: 7px;
+    /* display: inline-block; */
+}
+
+.line-h-10 {
+    line-height: 10px;
+    /* display: inline-block; */
+}
+
+.line-h-17 {
+    line-height: 17px;
+    display: inline-block;
+}
+
+input {
+    width: 30px;
+    height: 30px;
+}
+
+.size {
+    width: 50px;
+    height: 46px;
+}
+
+.h-46 {
+    height: 46px;
+}
+
+img {
+    border-radius: 5px;
+}
+
+img.card-img-top {
+    border-radius: 0;
+}
+
+a img {
+    border-radius: 0px;
+}
+
+.bg-dropdown-theme:hover {
+    background-color: #0136AA;
+    color: white;
+}
+
+.navbar-collapse .nav-text-color, .navbar-toggler-icon {
+    color: white;
+}
+
+.white {
+    color: white;
+}
+
+.nav-link:hover {
+    background-color: #1148AC;
+    color: white;
+}
+
+.reverse-theme {
+    background-color: white;
+    color: #0165D4;
+}
+
+.event-info:hover {
+    background-color: #D6E7FA;
+    color: #0165D4;
+}
+/* 
+footer {
+    margin-top: 20px;
+} */
+
+/* footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: none;
+} */
+
+.relative {
+    position: relative;
+    text-align: center;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 0.4vw;
+    left: 1.5vw;
+    padding: 0.5vw;
+    background-color: #5A646C;
+    color: white;
+    line-height: 0.5vw;
+    width: 11vw;
+}
+.top-right {
+    position: absolute;
+    top: 0.7vw;
+    right: 1.8vw;
+    padding: 0.5vw;
+    background-color: #5A646C;
+    color: white;
+    line-height: 0.6vw;
+    width: 2.5vw;
+}
+
+.top-right-3 {
+    text-align: center;
+    position: absolute;
+    top: 35px;
+    right: 10vw;
+    padding: 0.8vw;
+    background-color: #5A646C;
+    color: white;
+    line-height: 0.6vw;
+    width: 2.5vw;
+}
+
+.border-down{
+    border-width: 38px;
+    border-bottom-width: 50px;
+    border-color: red;
+    border-bottom: white solid 6px;
+    color: red;
+}
+
+.less-md {
+    display: none;
+}
+
+.experience-block {
+    /* display: block; */
+    text-align: justify;
+    font-size: 16px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.experience-block div.bg-theme{
+    padding: 20px;
+}
+
+.sign-width {
+    width: 100px;
+}
+
+@media screen and (max-width: 767px) {
+    .less-md {
+      display: block;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #all-concerts{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+#see-all {
+    display: none;
+}
+
+.celtic-events > :nth-child(2){
+    display: none;
+}
+}
+
+@media screen and (max-width: 1140px) {
+    .drop-1 {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1141px) {
+    .drop-1 {
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .drop-2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .drop-3 {
+        display: none;
+    }
+}
+
+.blue:hover {
+    color: #0165D4;
+}
+
+.bg-primary:hover {
+    background-color: #026CDF;
+    color: white;
+}
+
+.dropdown-item:hover {
+    background-color: #0165D4;
+}
+
+@media screen and (max-width: 992px) {
+    .lg-view {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .lg-lower-view {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hide-view {
+        display: none;
+    }
+}
+
+  /* Maryam styles */
+
+/* new styles start below */
+
+.header-search-field{
+    margin-top: -5px;
+    text-align: center;
+}
+
+.container-fluid.announcement-div{
+    margin: 20px 0;
+    text-align: justify;
+    padding: 0px 30px;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.announcement-div > div.row:not(:first-child){
+    border: 1px solid rgb(235, 235, 235);
+    padding: 20px 3px;
+    /* margin-bottom: -25px; */
+
+}
+.announcement-div > div.row:nth-of-type(2){
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.presale{
+    background-color: #dfa24c;
+    padding: 3px 8px;
+    /* width: fit-content; */
+    font-size: 10px;
+    color: white;
+    font-weight: bolder;
+    border-radius: 2px;
+}
+
+.inner-text-style{
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.discover-events{
+    text-align: justify;
+    font-weight: 600;
+}
+
+.discover-events a.btn{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.discover-events a.theater{
+    position: relative;
+    top: -37px;
+    left: 182px;
+}
+
+.less-md-block{
+    /* text-align: justify; */
+    font-weight: 600;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.less-md-block #popular{
+    font-size: 24px;
+}
+
+.less-md-block .popular-events{
+    font-size: 20px;
+}
+
+.celtic-events{
+    /* content: ""; */
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dfe4e7;
+    width: 95%;
+    margin: 0 -5px;
+}
+
+.hearts{
+    position: relative;
+    left: -40px;
+}
+
+.card-divs{
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 4px 4px 0px, rgba(0, 0, 0, 0.12) 0px 0px 4px 0px;
+}
+
+div.account-overview{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 599px){
+    .discover-events a.theater{
+    position: relative;
+    top: 0px;
+    left: 2px;
+}
+}
+
+@media only screen and (max-width: 767px){
+    .expand-at-medium, .expand-at-large, .questlove, .discover-events a.family{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .expand-at-large{
+        display: none;
+    }
+
+    ul.large-screen-menulinks{
+        /* display: flex; */
+    }
+
+    .unforgettable{
+        /* margin-top: -15px;
+        margin-bottom: -15px; */
+        position: relative;
+        top: -20px;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .discover-events{
+        text-align: center;
+    }
+
+    .discover-events a.btn{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .discover-events a.theater{
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .family.btn{
+        display: inline-block;
+    }
+
+    .less-md-block {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .celtic-events{
+        /* content: ""; */
+        padding-bottom: 0px;
+        border-bottom: none;
+    }
+    
+    .hearts{
+        position: relative;
+        top: -70px;
+        left: 100px;
+        font-size: 25px;
+    }
+
+    .presale{
+        /* width: 50%; */
+    }
+
+    .announced-events > div:nth-child(2){
+       position: relative;
+       left: 50px;
+    }
+
+}
+
+@media only screen and (min-width: 992px){
+    #white-div-nav ul.large-screen-menulinks{
+        /* display: none; */
+    }
+
+    .discover-events a.btn{
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+}

@@ -1,0 +1,50 @@
+.newsletter .card {
+    background-color: #4a6ad6
+}
+
+.newsletter .text-color {
+    color: #eee !important
+}
+
+.newsletter .form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 1.5rem + 2px);
+    padding: .75rem 1.25rem;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #696973;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #d5d5dc;
+    border-radius: .375rem;
+    box-shadow: none;
+    transition: all .3s ease
+}
+
+.newsletter .btn-dark {
+    color: #fff;
+    background-color: #1b1642;
+    border-color: #1b1642
+}
+
+.newsletter .btn {
+    display: inline-block;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #1b1642;
+    border: 1px solid transparent;
+    padding: .75rem 1.75rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .375rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}

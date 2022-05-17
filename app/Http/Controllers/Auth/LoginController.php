@@ -23,7 +23,7 @@ class LoginController extends Controller
         $credentials = $request->only('email','password');
 
         if ($this->webGuard()->attempt($credentials)) {
-            return redirect()->intended(route('home'));
+            return redirect()->intended(route('blog.index'));
         }
         return back()->with('error', 'Invalid credentials')->withInput();
     }

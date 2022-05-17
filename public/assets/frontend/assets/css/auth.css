@@ -1,0 +1,235 @@
+.main {
+    margin-top: 15px;
+    border-right: 2px;
+    padding: 10px;
+}
+
+.blue-div-logo{
+        position: relative;
+        left: -40px;
+    }
+    .divider{
+        border-right: 3px solid #c8cbcf;
+        height: 100%;
+        padding: 0 5px;
+    }
+
+    .side-bg {
+        background-image: url(../images/login-bg.jpg);
+        background-size: cover;
+        background-position: bottom;
+        color: #000;
+        transition: 2s ease-in-out;
+        height: 520px;
+        padding: 3% 3%;
+        background-color: #1a0ba05e;
+        background-blend-mode: overlay;
+    }
+    .side-bgs {
+        background-image: url(../images/login-bg.jpg);
+        background-size: cover;
+        background-position: bottom;
+        color: #fff;
+        transition: 2s ease-in-out;
+        height: 630px;
+        padding: 40px 30px;
+        background-color: #1a0ba05e;
+        background-blend-mode: overlay;
+    }
+    .login-signup{
+        color: #D37D03;
+        font-weight: 900;
+
+    }
+    .login-signup:hover{
+        color: #fff;
+        font-weight: 900;
+
+    }
+    
+
+    .side-bg p#welcome-back-note{
+        margin: 40px auto;
+    }
+
+    .hr-class hr{
+        border: 1px solid #fff; 
+        
+    }
+
+    /* reset password */
+    .small-button button.proceed{
+        position: absolute;
+        right: 20px;
+        margin: auto -5px;
+    }
+
+
+    .col-form-label {
+        /* display: block; */
+        font-size: 12px;
+    }
+
+    .flex-this{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .full-screen {
+        border-radius: 5px;
+        /* height: 90.5vh; */
+    }
+
+    .full-screen .add-padding{
+        margin: 5px 0;
+    }
+
+    .page-desc {
+    font-size: 38px;
+    width: 3%;
+    font-weight: 700;
+    }
+
+    .p-6 {
+        padding: 70px;
+    }
+
+    .p-7 {
+        padding: 100px;
+    }
+
+    .buttons .back {
+        background-color: white;
+        color: #190ba0;
+        font-weight: 900;
+    }
+
+    .buttons .back:hover {
+        background-color: rgba(29, 16, 164, 0.1);
+    }
+
+    .buttons .proceed {
+        background-color: #190ba0;
+        color: white;
+        font-weight: 600;
+    }
+
+    .img-div {
+        position: absolute;
+        margin: 200px 0;
+        right: 20px;
+    }
+
+    .side-b {
+        width: 100%;
+        background: black;
+        overflow: hidden;
+    }
+
+    #overlay {
+  position: fixed;
+  /* display: none; */
+  width: 42%;
+  height: 100%;
+  /* top: 100;
+  left: 50;
+  right: 0;
+  bottom: 0; */
+  background: linear-gradient(to bottom, rgba(0,0,0,1.0), rgba(0,0,0,0.7));
+  z-index: 2;
+  cursor: pointer;
+}
+
+a {
+    color: #190ba0;
+    font-weight: 600;
+}
+
+a.back-to-signin{
+    text-align: right;
+}
+
+#sign-in-text{
+    font-size: 24px;
+    color: rgb(38, 38, 38);
+}
+
+#reset-password-text{
+    font-size: 24px;
+    color: rgb(38, 38, 38);
+    margin: 0px auto 40px;
+}
+
+.policy-terms-text{
+    text-align: left;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+span#show{
+    position: absolute;
+    top: 50px;
+    right: 5px;
+    padding: 0 15px;
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 991px) {
+    .side-bg{
+        display: none;
+        overflow: auto;
+
+    }
+    .divider{
+        border-right: none;
+        
+    }
+
+}
+@media only screen and (min-width: 768px){
+    body{
+        background-color: rgba(0,0,0,0.8);
+        overflow-y: hidden;
+    }
+
+    .full-screen .add-padding{
+        padding: 5px 10px;
+    }
+    .full-screen{
+    width: 50%;
+    margin: 100px auto;
+    background-color: white;
+    }
+
+    button.proceed{
+        max-width: 25%;
+        position: absolute;
+        right: 30px;
+        padding: 7px;
+    }
+
+    /* reset pasword css here */
+    .small-button button.proceed{
+        position: absolute;
+        margin: 0 10px;
+    }
+
+}
+
+@media only screen and (min-width: 992px){
+    .full-screen{
+        /* width: 90%; */
+        margin: 0px auto;
+    }
+
+    .small-button button.proceed{
+        position: absolute;
+        /* margin: 0 10px; */
+    }
+}
+
+@media only screen and (min-width: 1199px){
+   .img-div {
+        margin: 220px 0;
+    }
+}

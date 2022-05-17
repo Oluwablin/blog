@@ -14,22 +14,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 //Authentication
-Route::group(['namespace' => 'Auth'], function() {
-    Route::match(['get', 'post'], 'login',          [\App\Http\Controllers\Auth\LoginController::class, 'login'])->name('login');
-    Route::get( 'logout',                           [\App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
+Route::group(['prefix' => 'auth', 'as' => 'auth.'], function () {
+    Route::match(['get', 'post'], 'login',              [\App\Http\Controllers\Auth\LoginController::class, 'login'])->name('login');
+    Route::get('logout',                                [\App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
 });
 
-//Blog
-Route::group(['prefix' => 'blog', 'as' => 'blog.'], function () {
-    Route::get('/blog',                             [\App\Http\Controllers\Blog\BlogController::class, 'index'])->name('index'); 
-    Route::get('/{blog}',                           [\App\Http\Controllers\Blog\BlogController::class, 'show'])->name('show'); 
-    Route::get('/create/blog',                      [\App\Http\Controllers\Blog\BlogController::class, 'create'])->name('create'); 
-    Route::post('/create/blog',                     [\App\Http\Controllers\Blog\BlogController::class, 'store'])->name('store'); 
-    Route::get('/{blog}/edit',                      [\App\Http\Controllers\Blog\BlogController::class, 'edit'])->name('edit'); 
-    Route::put('/{blog}/edit',                      [\App\Http\Controllers\Blog\BlogController::class, 'update'])->name('update');  
-    Route::delete('/{blog}',                        [\App\Http\Controllers\Blog\BlogController::class, 'destroy'])->name('delete'); 
+//Authenticated Routes
+Route::group(['middleware' => 'auth:web'], function () {
+
+    //Blog
+    Route::group(['prefix' => 'blog', 'as' => 'blog.'], function () {
+        Route::get('/',                                 [\App\Http\Controllers\Blog\BlogController::class, 'index'])->name('index');
+        Route::get('/{blog}',                           [\App\Http\Controllers\Blog\BlogController::class, 'show'])->name('show');
+        Route::get('/create/blog',                      [\App\Http\Controllers\Blog\BlogController::class, 'create'])->name('create');
+        Route::post('/create/blog',                     [\App\Http\Controllers\Blog\BlogController::class, 'store'])->name('store');
+        Route::get('/{blog}/edit',                      [\App\Http\Controllers\Blog\BlogController::class, 'edit'])->name('edit');
+        Route::put('/{blog}/edit',                      [\App\Http\Controllers\Blog\BlogController::class, 'update'])->name('update');
+        Route::delete('/{blog}',                        [\App\Http\Controllers\Blog\BlogController::class, 'destroy'])->name('delete');
+    });
 });
