@@ -18,6 +18,12 @@ class Blog extends Model
 
     protected $guarded = [''];
 
+    protected $fillable = [
+        'title', 
+        'description',
+        'user_id',
+    ];
+
     //Blog relationship with Users
     public function user()
     {
