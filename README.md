@@ -1,7 +1,7 @@
 
 ## BLOG
 
-An application that allows employees to submit feedback toward each other’s performance review.
+A blog that lists all blogs i follow and polls RSS feeds every minute to check for updates.
 
 ## Project Description
 
