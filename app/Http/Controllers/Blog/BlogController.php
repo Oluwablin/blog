@@ -17,7 +17,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::all();
+        $blogs = Blog::orderBy('id', 'DESC')->get();
 
 	    return view('blog.index', compact('blogs'));
     }
@@ -54,7 +54,7 @@ class BlogController extends Controller
         ]);
 
         if($blog){
-            return redirect('blog/' . $blog->id)->with('success', 'Blog created successfully!');
+            return redirect('/blog')->with('success', 'Blog created successfully!');
         }
         return redirect('/blog')->with('error', 'Blog could not be created!');
     }
