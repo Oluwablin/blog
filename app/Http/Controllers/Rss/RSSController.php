@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Rss;
 
 use App\Models\RSS;
 use App\Http\Controllers\Controller;
-use App\Models\Blog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use SimpleXMLElement;

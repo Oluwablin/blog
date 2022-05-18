@@ -39,7 +39,6 @@ Route::group(['middleware' => 'auth:web'], function () {
 
     //Blog
     Route::group(['prefix' => 'blog/manage', 'as' => 'rss.'], function () {
-        //Route::get('/feed',                             [\App\Http\Controllers\Rss\RSSController::class, 'rss']);
         Route::get('/feed',                             [\App\Http\Controllers\Rss\RSSController::class, 'index'])->name('index');
         Route::get('/{rss}',                            [\App\Http\Controllers\Rss\RSSController::class, 'show'])->name('show');
         Route::get('/create/rss',                       [\App\Http\Controllers\Rss\RSSController::class, 'create'])->name('create');
