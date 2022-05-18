@@ -36,4 +36,13 @@ Route::group(['middleware' => 'auth:web'], function () {
         Route::put('/{blog}/edit',                      [\App\Http\Controllers\Blog\BlogController::class, 'update'])->name('update');
         Route::delete('/{blog}',                        [\App\Http\Controllers\Blog\BlogController::class, 'destroy'])->name('delete');
     });
+
+    //Blog
+    Route::group(['prefix' => 'blog/manage', 'as' => 'rss.'], function () {
+        //Route::get('/feed',                             [\App\Http\Controllers\Rss\RSSController::class, 'rss']);
+        Route::get('/feed',                             [\App\Http\Controllers\Rss\RSSController::class, 'index'])->name('index');
+        Route::get('/{rss}',                            [\App\Http\Controllers\Rss\RSSController::class, 'show'])->name('show');
+        Route::get('/create/rss',                       [\App\Http\Controllers\Rss\RSSController::class, 'create'])->name('create');
+        Route::post('/create/rss',                      [\App\Http\Controllers\Rss\RSSController::class, 'store'])->name('store');
+    });
 });
