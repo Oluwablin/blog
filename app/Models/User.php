@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\Blog;
+use App\Models\RSS;
 
 class User extends Authenticatable
 {
@@ -51,5 +52,11 @@ class User extends Authenticatable
     public function blogs()
     {
         return $this->HasMany(Blog::class);
+    }
+
+    //User relationship with RSS feeds
+    public function rss_feeds()
+    {
+        return $this->HasMany(RSS::class);
     }
 }

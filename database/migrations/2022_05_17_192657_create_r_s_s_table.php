@@ -16,10 +16,12 @@ class CreateRSSTable extends Migration
         Schema::create('r_s_s', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedBigInteger('user_id');
+            $table->string('guid');
             $table->string('title')->nullable();
             $table->text('description')->nullable();
             $table->string('author');
             $table->string('link');
+            $table->date('published_at');
             $table->boolean('is_read')->nullable()->default(false);
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

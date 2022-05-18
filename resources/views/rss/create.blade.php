@@ -19,7 +19,7 @@
                             <div class="control-group col-12">
                                 <label for="link"><p><font color= dark-brown>RSS feed</font></label>
                                 <input type="text" id="link" class="form-control" name="link"
-                                       placeholder="Enter RSS link - http://" required>
+                                       placeholder="Enter RSS link - http://rss.. or feeds.." required>
                             </div>
                             <!-- <div class="control-group col-12 mt-2">
                                 <label for="description"><p><font color= dark-brown>Description</font></label>

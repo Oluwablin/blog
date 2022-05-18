@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use SimpleXMLElement;
+use Illuminate\Support\Facades\DB;
 
 class RSSController extends Controller
 {
@@ -16,20 +18,12 @@ class RSSController extends Controller
      * @return \Illuminate\Http\Response
      * Display all RSS feeds
      */
-    // public function rss()
-    // {
-    //     $posts = RSS::all();
-
-    //     $content = view('rss.index', compact('posts'));
-
-    //     return response($content, 200)->header('Content-Type', 'application/xml');
-    // }
 
     public function index()
     {
         $rss_feeds = RSS::latest()->take(10)->get();
 
-	    return view('rss.index', compact('rss_feeds'));
+        return view('rss.index', compact('rss_feeds'));
     }
 
     /**
@@ -53,20 +47,35 @@ class RSSController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'title'   => 'required',
-            'description'    => 'required',
+            'link'   => 'required',
         ]);
 
-        $rss_feed = RSS::create([
-            'title' => $request->title,
-            'description' => $request->description,
-            'user_id' => Auth::id(),
-        ]);
+        try {
+            DB::beginTransaction();
+            $link = file_get_contents($request->link);
+            $contents = new SimpleXMLElement($link);
 
-        if($rss_feed){
-            return redirect('/blog/manage')->with('success', 'RSS feed added successfully!');
+            foreach ($contents->channel->item as $content) {
+                $rss_feed = RSS::insert([
+                    'guid' => $content->guid,
+                    'title' => $content->title,
+                    'description' => $content->description,
+                    'user_id' => Auth::id(),
+                    'author' => $content->author,
+                    'link' => $content->link,
+                    'published_at' => date("Y-m-d H:i:s", strtotime($content->pubDate)),
+                ]);
+            }
+
+            if ($rss_feed) {
+                DB::commit();
+                return redirect('/blog/manage/feed')->with('success', 'RSS feed added successfully!');
+            }
+        } catch (\Throwable $th) {
+
+            DB::rollback();
+            return redirect('/blog/manage/feed')->with('error', 'RSS feed could not be added!');
         }
-        return redirect('/blog/manage')->with('error', 'RSS feed could not be added!');
     }
 
     /**
@@ -76,9 +85,9 @@ class RSSController extends Controller
      * @return \Illuminate\Http\Response
      * Display a particular RSS feed
      */
-    public function show(RSS $rSS)
+    public function show(RSS $rss)
     {
-        return view('rss.show', compact('rSS'));
+        return view('rss.show', compact('rss'));
     }
 
     /**
@@ -111,13 +120,13 @@ class RSSController extends Controller
      * @return \Illuminate\Http\Response
      * Delete an RSS feed
      */
-    public function destroy(RSS $rSS)
+    public function destroy(RSS $rss)
     {
-        $delete_rss = $rSS->delete();
+        $delete_rss = $rss->delete();
 
-        if($delete_rss){
-            return redirect('/blog/manage')->with('success', 'RSS feed deleted successfully!');
+        if ($delete_rss) {
+            return redirect('/blog/manage/feed')->with('success', 'RSS feed deleted successfully!');
         }
-        return redirect('/blog/manage')->with('error', 'RSS feed could not be deleted!');
+        return redirect('/blog/manage/feed')->with('error', 'RSS feed could not be deleted!');
     }
 }

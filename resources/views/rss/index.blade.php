@@ -18,8 +18,10 @@
                     <ul>
                         <li><a href="/blog/manage/{{ $rss_feed->id }}">{{ ucfirst($rss_feed->title) }}</a></li>
                     </ul>
-                    <p><font color= dark-brown><a href= "{{ $rss_feed->link }}"></a></font></p>
-                    <p><font color= dark-brown>{!! $rss_feed->description !!}</font></p>
+                    <p><font color= dark-brown><a href= "{{ $rss_feed->link }}">RSS Feed Link</a></font></p>
+                    <p><font color= dark-brown>Description: {!! $rss_feed->description !!}</font></p>
+                    <p><font color= dark-brown>Author: {!! $rss_feed->author !!}</font></p>
+                    <p><font color= dark-brown>Pulished Date: {{ date("Y m d", strtotime($rss_feed->published_at)) }}</font></p>
                 @empty
                     <p class="text-warning">No RSS feed available</p>
                 @endforelse

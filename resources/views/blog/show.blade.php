@@ -10,7 +10,7 @@
                 <hr>
                 <a href="/blog/{{ $blog->id }}/edit" class="btn btn-outline-primary">Edit Blog</a>
                 <br><br>
-                <form id="delete-frm" class="" action="" method="post">
+                <form id="delete-frm" action="/blog/{{ $blog->id }}" method="post">
                     @method('DELETE')
                     @csrf
                     <button class="btn btn-danger">Delete Blog</button>

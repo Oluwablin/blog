@@ -44,5 +44,6 @@ Route::group(['middleware' => 'auth:web'], function () {
         Route::get('/{rss}',                            [\App\Http\Controllers\Rss\RSSController::class, 'show'])->name('show');
         Route::get('/create/rss',                       [\App\Http\Controllers\Rss\RSSController::class, 'create'])->name('create');
         Route::post('/create/rss',                      [\App\Http\Controllers\Rss\RSSController::class, 'store'])->name('store');
+        Route::delete('/{rss}',                         [\App\Http\Controllers\Rss\RSSController::class, 'destroy'])->name('delete');
     });
 });
